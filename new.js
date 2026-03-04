@@ -39,8 +39,11 @@ function getMoonPhase() {
             console.log("Phase index = ", index);
 
             if (index !== -1) {
-                document.querySelector("#phase").src =
-                    "assets/" + index + ".svg";
+               fetch("assets/" + index + ".svg")
+                .then(res => res.text())
+                .then(svg => {
+                    document.querySelector("#phase").outerHTML = svg;
+  });
             } 
 
             document.querySelector(".currentPhase").textContent = moonPhase;
