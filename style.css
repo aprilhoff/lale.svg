@@ -1,0 +1,100 @@
+ @import url("https://use.typekit.net/oex3jme.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+span{
+  font-style: italic;
+}
+.grid{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#right-side{
+  padding: 30px;
+
+  font-family: "adobe-aldine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+  color: #FF0000;
+}
+#left-side {
+  padding: 30px;
+
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+
+#left-side {
+  padding: 30px;
+  border-right: 1px solid #FF0000;
+}
+
+.grid img{
+  display: block;
+  margin: auto;
+}
+
+.about{
+  font-family: "adobe-aldine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  color: #FF0000;
+  padding: 30px;
+  border-top: #FF0000 1px solid;
+}
+
+.navigation{
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FF0000;
+}
+a{
+  color: #FF0000;
+  font-size: 2em;
+  font-family: "adobe-aldine", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+  a:hover{
+    font-weight: 700;
+  }
+h1{
+  color: #FF0000;
+  font-size: 2rem;
+  font-family: "adobe-aldine", sans-serif;  
+}
+h2{
+  color: #FF0000;
+  font-size: 2rem;
+  font-family: "adobe-aldine", sans-serif;
+    font-weight: 400;
+ 
+}
+
+.allPhases{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.allPhases img{
+  width: 50rem;
+  padding: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.phaseNow{
+    padding: 30px;
+
+  border-bottom: 1px solid #FF0000;
+}
