@@ -20,10 +20,14 @@ let logos = [];
 
 // preloading svg 
 function preload (){
-    logos.push(loadImage("0.svg"));
-    logos.push(loadImage("1.0.svg"));
-    logos.push(loadImage("1.1.svg"));
-    logos.push(loadImage("2.svg"));
+    logos.push(loadImage("assets/0.svg"));
+    logos.push(loadImage("assets/1.svg"));
+    logos.push(loadImage("assets/2.svg"));
+    logos.push(loadImage("assets/3.svg"));
+    logos.push(loadImage("assets/4.svg"));
+    logos.push(loadImage("assets/5.svg"));
+    logos.push(loadImage("assets/6.svg"));
+    logos.push(loadImage("assets/7.svg"));
 }
 
 // array for phase  + corresponding logo
@@ -41,59 +45,40 @@ let currentPhase = [
 
 
 
-// fetch moon phase data
-function getMoonPhase() {
-
-    fetch(`https://corsproxy.io/?https://aa.usno.navy.mil/api/rstt/oneday?date=${currentYear}-${currentMonth}-${currentDate}&coords=49.1233,55.7879&tz=3&dst=false`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data); 
-
-            let moonPhase = data.properties.data.curphase;
-            console.log("Moon phase:", moonPhase);
-
-            let index = currentPhase.indexOf(moonPhase);
-
-        })
-}
-
-getMoonPhase();
-
 
 
 function setup() {
-    createCanvas(1000, 820);
+    let canvas = createCanvas(600, 800);
+    canvas.parent("canvas-container");
 
-    // slider
+    textFont("adobe-aldine");
+
     phaseSlider = createSlider(0, 7, 0, 1);
-    phaseSlider.position(20, 100);
+    phaseSlider.parent("canvas-container");
+
+    phaseSlider.style('width', '200px');
 
 }
 
+
 function draw() {
-    translate(0, 0);
     background(255, 255, 255);
+
     rightNow = new Date();
     
-    imageMode(CENTER);
 
     let phaseIndex = phaseSlider.value();
     let phaseName = currentPhase[phaseIndex];
+    
+    imageMode(CENTER);
 
-    textSize(20);
-    textAlign(CENTER);
-    fill(0);
-    text(phaseName, 100, 50);
+
+    textSize(40);
+    textAlign(CENTER, CENTER);
+    fill("#FF0000");
+    text(phaseName, width/2, 50);
  
-
-
     image(logos[phaseIndex], width/2, height/2);
-   
-
-    // if (phaseIndex >= 1) {
-    //     image(logos["1.0"], width/2, 150);
-    //     image(logos["1.1"], width/2,  40);
-    // }
-
 }
 
+ 
