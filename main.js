@@ -48,7 +48,7 @@ let currentPhase = [
 
 
 function setup() {
-    let canvas = createCanvas(600, 800);
+    let canvas = createCanvas(600, 650);
     canvas.parent("canvas-container");
 
     textFont("adobe-aldine");
