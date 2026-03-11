@@ -38,7 +38,7 @@ let currentPhase = [
         "Waxing Gibbous",
         "Full Moon",
         "Waning Gibbous",
-        "Last Quarter",
+        "Third Quarter",
         "Waning Crescent"
 ]; 
 
