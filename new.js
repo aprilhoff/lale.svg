@@ -26,7 +26,7 @@ let currentPhase = [
 
 
 // fetch moon phase data
-function getMoonPhase() {
+function getMoonPhase( ) {
 
     fetch(`https://corsproxy.io/?https://aa.usno.navy.mil/api/rstt/oneday?date=${currentYear}-${currentMonth}-${currentDate}&coords=49.1233,55.7879&tz=3&dst=false`)
         .then(response => response.json())
